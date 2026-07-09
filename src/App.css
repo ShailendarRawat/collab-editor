@@ -1,38 +1,100 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  background: #f0f2f5;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.editor-container {
+  max-width: 800px;
+  margin: 60px auto;
+  background: white;
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-bottom: 8px;
+}
+
+h1 {
+  margin: 0;
+  color: #1a1a2e;
+  font-size: 24px;
+}
+
+.status {
+  font-size: 14px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.online {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.offline {
+  background: #ffeaea;
+  color: #c62828;
+}
+
+.subtitle {
+  color: #888;
+  font-size: 14px;
+  margin: 0 0 20px 0;
+}
+
+.editor {
+  width: 100%;
+  height: 400px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 16px;
+  line-height: 1.6;
+  resize: none;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+
+.editor:focus {
+  border-color: #4a90e2;
+}
+
+.word-count {
+  margin-top: 10px;
+  color: #888;
+  font-size: 14px;
+}
+
+.presence-bar {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.presence-you,
+.presence-user {
+  padding: 4px 12px;
+  border-radius: 20px;
   color: white;
+  font-size: 13px;
+  font-weight: 600;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.offline-banner {
+  background: #fff3cd;
+  border: 1px solid #ffc107;
+  border-radius: 8px;
+  padding: 10px 16px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: #856404;
 }
